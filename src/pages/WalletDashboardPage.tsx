@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import WalletActivationCard from '../components/wallet/WalletActivationCard';
 import WalletBalanceCard from '../components/wallet/WalletBalanceCard';
+import PayoutRequestsList from '../components/wallet/PayoutRequestsList';
 import TransactionHistoryList from '../components/wallet/TransactionHistoryList';
 import Alert from '../components/ui/Alert';
 import {
@@ -131,6 +132,14 @@ export default function WalletDashboardPage() {
                 />
               ))}
             </div>
+          </div>
+
+          {/* Transaction History */}
+          <div>
+            <h2 className="text-lg font-semibold text-gray-900 mb-4">
+              Payout Requests
+            </h2>
+            <PayoutRequestsList />
           </div>
 
           {/* Transaction History */}
